@@ -6,7 +6,7 @@ b = 1./a;
 
 %% 用二分法查找出注水线mid
 minElement = min(b);
-maxElement = max(b);
+maxElement = max(b) + 1 / T; % 防止sum(max(b)) < 1
 mid = mean([minElement, maxElement]);
 tmp = check(mid,b);
 % 非常接近0也可
